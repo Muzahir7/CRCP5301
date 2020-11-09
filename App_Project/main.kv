@@ -1,0 +1,39 @@
+BoxLayout:
+        orientation: 'vertical'
+        MDToolbar:
+                title: "Doch"
+                halign: "center"
+                md_bg_color: app.theme_cls.primary_color
+        MDBottomNavigation:
+                # This a fancy screen manager
+                MDBottomNavigationItem:
+                        # This is a fancy screen
+                        text: "Home"
+                        name: "Screen1"
+                        icon: "home"
+                        BoxLayout:
+                                Button:
+                                Button:
+                                Button:
+
+                MDBottomNavigationItem:
+                        # This is a fancy screen
+                        text: "Notification"
+                        name: "Screen2"
+                        icon: "bell"
+                        BoxLayout:
+                                orientation: 'vertical'
+                                Button:
+                                Button:
+                                Button:
+
+                MDBottomNavigationItem:
+                        # This is a fancy screen
+                        text: "Profile"
+                        name: "Screen3"
+                        icon: "account"
+                        BoxLayout:
+                                orientation: 'vertical'
+                                Button:
+                                Button:
+                                Button:
