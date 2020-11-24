@@ -2,22 +2,28 @@ BoxLayout:
         orientation: 'vertical'
         MDToolbar:
                 title: "Doch"
-                halign: "center"
                 md_bg_color: app.theme_cls.primary_color
+
+
         MDBottomNavigation:
-                # This a fancy screen manager
+
                 MDBottomNavigationItem:
                         # This is a fancy screen
                         text: "Home"
                         name: "Screen1"
                         icon: "home"
-                        BoxLayout:
-                                Button:
-                                Button:
-                                Button:
+
+                        MDGridLayout:
+
+                                cols: 1
+                                adaptive_height: True
+                                padding: dp(4), dp(4)
+                                spacing: dp(4)
+
+
 
                 MDBottomNavigationItem:
-                        # This is a fancy screen
+
                         text: "Notification"
                         name: "Screen2"
                         icon: "bell"
@@ -28,12 +34,22 @@ BoxLayout:
                                 Button:
 
                 MDBottomNavigationItem:
-                        # This is a fancy screen
+
                         text: "Profile"
                         name: "Screen3"
                         icon: "account"
                         BoxLayout:
-                                orientation: 'vertical'
-                                Button:
-                                Button:
-                                Button:
+                        ScrollView:
+                                MDList:
+
+
+                                        OneLineAvatarListItem:
+                                                on_release: print("Opens the edit profile menu")
+                                                text: "Edit Profile"
+
+                                                ImageLeftWidget:
+                                                        source: "images\doch-1.jpg"
+
+                                        OneLineListItem:
+                                                on_release: print("Logs out of the account. Goes Back to Login Page")
+                                                text: "Log Out"
